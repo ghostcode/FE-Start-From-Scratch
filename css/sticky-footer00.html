@@ -4,22 +4,28 @@
         <meta charset="utf-8">
         <title>stick-footer</title>
         <style media="screen">
-            /*https://css-tricks.com/snippets/css/sticky-footer/*/
-            html,body{
+            body{
+                margin:0;
+            }
+
+            html{
                 height:100%;
             }
-            .wrapper{
+            body{
                 min-height: 100%;
+                position: relative;
             }
-            .wrapper:after{
+            body:after{
                 content:'';
-                display:block;
-                /* equal footer height*/
+                display: block;
                 height:100px;
             }
+
             footer{
-                /*equal footer height*/
-                margin-top: -100px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
                 height:100px;
                 text-align: center;
                 background-color: #ddd;
